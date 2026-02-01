@@ -22,7 +22,7 @@ yesBtn.addEventListener("click", () => {
         <h1>YAAAY 💐💖</h1>
         <p>You just made my heart happy 🥹 boo boo bear ❤️😙</p>
         <h3>I LOVE YOU, BABE ❤️🌹</h3>
-        <img src="assets/photo.jpg" style="width:300px; height:150px;">
+        <img src="photo.jpg" style="width:300px; height:150px;">
     `;
 
     flowerRain();
@@ -30,15 +30,15 @@ yesBtn.addEventListener("click", () => {
 
 // Flower rain
 function flowerRain() {
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 120; i++) {
         const f = document.createElement("div");
         f.className = "flower";
         f.innerHTML = "🌸";
         f.style.left = Math.random() * window.innerWidth + "px";
-        f.style.animationDuration = (Math.random() * 3 + 2) + "s";
+        f.style.animationDuration = (Math.random() * 6 + 5) + "s";
         document.body.appendChild(f);
 
-        setTimeout(() => f.remove(), 5000);
+        setTimeout(() => f.remove(), 10000);
     }
 }
 
